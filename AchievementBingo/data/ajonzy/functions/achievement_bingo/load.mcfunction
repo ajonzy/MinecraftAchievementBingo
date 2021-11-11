@@ -42,3 +42,4 @@ scoreboard objectives add Dia1Bingo dummy
 scoreboard objectives add Dia2Bingo dummy
 
 scoreboard objectives add new_game trigger
+scoreboard objectives add end_game trigger
