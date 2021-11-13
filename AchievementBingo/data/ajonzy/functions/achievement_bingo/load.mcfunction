@@ -2,6 +2,8 @@ scoreboard objectives add AchievementBingo dummy
 scoreboard objectives add BingoTracker dummy
 scoreboard objectives add Time dummy
 
+scoreboard players set loaded BingoTracker 0
+
 scoreboard objectives add Row1Col1 dummy
 scoreboard objectives add Row1Col2 dummy
 scoreboard objectives add Row1Col3 dummy
@@ -43,3 +45,7 @@ scoreboard objectives add Dia2Bingo dummy
 
 scoreboard objectives add new_game trigger
 scoreboard objectives add end_game trigger
+
+setworldspawn 0 0 0
+execute unless score loaded BingoTracker matches 1 run summon armor_stand 0 0 0 {CustomNameVisible:0b,NoGravity:1b,Invulnerable:1b,Marker:1b,Invisible:1b,HandItems:[{id:"minecraft:written_book",Count:1b,tag:{title:"Achievement Bingo",author:"Ajonzy",pages:[]}},{}],CustomName:'{"text":"book_builder"}'}
+function ajonzy:achievement_bingo/game/load_markers
